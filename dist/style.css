@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header{
+    background-color: #faa307;
+    color: #370617;
+    padding: 1.2rem;
+}
+
+.header__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.header__title{
+    font-size: 3rem;
+}
+
+.header__addtask{
+    font-size: 3rem;
+}
+
+.header__addtask:hover{
+    cursor: pointer;
+    color: #ef233c;
+}
+
+
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.main__content{
+    width: 80%;
+    min-height: 100%;
+    background-color: #ffba08;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: .5rem;
+    border: 2px solid #d00000;
+    border-radius: .5rem;
+    max-width: 20rem;
+    background-color: #FFD15C;
+    position: relative;
+}
+
+.task__done{
+    background-color: #adc178;
+}
+
+.task__delete{
+    font-size: 1.5rem;
+    color: #d00000;
+    cursor: pointer;
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+}
+
+.task__title{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.task__title:hover{
+    cursor: pointer;
+    color: #d00000;
+}
+
+.task__duedate{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.task__description{
+    font-size: 1.2rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main__nav{
+    width: 20%;
+    max-height: 100%;
+    background-color: #dc2f02;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.main__nav__addtask{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.main__nav__list{
+    list-style: none;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+}
+
+.main__nav__list__item{
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main__nav__list__item .project__delete{
+    display: none;
+    font-size: 1.5rem;
+    color: #e9c46a;
+}
+
+.visible{
+    display: block !important;
+}
+
+.footer{
+    background-color: #faa307;
+    color: #370617;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.footer__desc__link{
+    text-decoration: none;
+    color: #370617;
+}
+
+.footer__desc{
+    font-size: 1.2rem;
+}
+
+.footer__desc__link:hover{
+    color: #9d0208;
+}
+
+.add__project{
+    position: absolute;
+    padding: 1rem;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #dc2f02;
+    z-index: 1;
+    background-color: #ffecd1;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.add__project__container{
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    align-items: center;
+}
+
+.add__project__title{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.add__project__input{
+    border-radius: 5px;
+    border: none;
+    padding: .2rem;
+    background-color: #e27e52;
+    color: #006868;
+    border: 2px solid #81171b;
+    font-size: 1.2rem;
+}
+
+.add__project__button{
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    padding: .4rem;
+    background-color: #6a040f;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.add__task{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #370617;
+    padding: 1rem 2rem;
+    background-color: #ffecd1;
+    border-radius: 10px;
+    display: none;
+}
+
+.add__task__container{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    width: 100%;    
+}
+
+.add__task__title{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.add__task__input{
+    padding: .3rem;
+    border-radius: 5px;
+    background-color: #e27e52;
+    color: #006868;
+    border: 2px solid #81171b;
+}
+
+.add__task__button{
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    padding: .4rem;
+    background-color: #6a040f;
+    color: #FFF;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+.modify__task{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #370617;
+    padding: 1rem 2rem;
+    background-color: #ffecd1;
+    border-radius: 10px;
+    display: none;
+}
